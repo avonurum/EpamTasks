@@ -1,0 +1,7 @@
+C:\Users\ANYA\source\repos\Intro 02\Intro 02\bin\Debug\Intro 02.exe.config
+C:\Users\ANYA\source\repos\Intro 02\Intro 02\bin\Debug\Intro 02.exe
+C:\Users\ANYA\source\repos\Intro 02\Intro 02\bin\Debug\Intro 02.pdb
+C:\Users\ANYA\source\repos\Intro 02\Intro 02\obj\Debug\Intro 02.csprojAssemblyReference.cache
+C:\Users\ANYA\source\repos\Intro 02\Intro 02\obj\Debug\Intro 02.csproj.CoreCompileInputs.cache
+C:\Users\ANYA\source\repos\Intro 02\Intro 02\obj\Debug\Intro 02.exe
+C:\Users\ANYA\source\repos\Intro 02\Intro 02\obj\Debug\Intro 02.pdb
