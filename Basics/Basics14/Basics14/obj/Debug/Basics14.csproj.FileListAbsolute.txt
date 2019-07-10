@@ -1,0 +1,7 @@
+C:\Users\ANYA\source\repos\Basics14\Basics14\bin\Debug\Basics14.exe.config
+C:\Users\ANYA\source\repos\Basics14\Basics14\bin\Debug\Basics14.exe
+C:\Users\ANYA\source\repos\Basics14\Basics14\bin\Debug\Basics14.pdb
+C:\Users\ANYA\source\repos\Basics14\Basics14\obj\Debug\Basics14.csprojAssemblyReference.cache
+C:\Users\ANYA\source\repos\Basics14\Basics14\obj\Debug\Basics14.csproj.CoreCompileInputs.cache
+C:\Users\ANYA\source\repos\Basics14\Basics14\obj\Debug\Basics14.exe
+C:\Users\ANYA\source\repos\Basics14\Basics14\obj\Debug\Basics14.pdb

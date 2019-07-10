@@ -1,0 +1,7 @@
+C:\Users\ANYA\source\repos\Basics12\Basics12\bin\Debug\Basics12.exe.config
+C:\Users\ANYA\source\repos\Basics12\Basics12\bin\Debug\Basics12.exe
+C:\Users\ANYA\source\repos\Basics12\Basics12\bin\Debug\Basics12.pdb
+C:\Users\ANYA\source\repos\Basics12\Basics12\obj\Debug\Basics12.csprojAssemblyReference.cache
+C:\Users\ANYA\source\repos\Basics12\Basics12\obj\Debug\Basics12.csproj.CoreCompileInputs.cache
+C:\Users\ANYA\source\repos\Basics12\Basics12\obj\Debug\Basics12.exe
+C:\Users\ANYA\source\repos\Basics12\Basics12\obj\Debug\Basics12.pdb
