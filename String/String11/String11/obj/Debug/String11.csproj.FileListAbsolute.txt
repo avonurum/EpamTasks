@@ -1,0 +1,6 @@
+C:\Users\ANYA\source\repos\String11\String11\bin\Debug\String11.exe.config
+C:\Users\ANYA\source\repos\String11\String11\bin\Debug\String11.exe
+C:\Users\ANYA\source\repos\String11\String11\bin\Debug\String11.pdb
+C:\Users\ANYA\source\repos\String11\String11\obj\Debug\String11.csproj.CoreCompileInputs.cache
+C:\Users\ANYA\source\repos\String11\String11\obj\Debug\String11.exe
+C:\Users\ANYA\source\repos\String11\String11\obj\Debug\String11.pdb
