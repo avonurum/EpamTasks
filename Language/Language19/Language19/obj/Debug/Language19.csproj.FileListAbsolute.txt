@@ -1,0 +1,7 @@
+C:\Users\ANYA\source\repos\Language19\Language19\bin\Debug\Language19.exe.config
+C:\Users\ANYA\source\repos\Language19\Language19\bin\Debug\Language19.exe
+C:\Users\ANYA\source\repos\Language19\Language19\bin\Debug\Language19.pdb
+C:\Users\ANYA\source\repos\Language19\Language19\obj\Debug\Language19.csprojAssemblyReference.cache
+C:\Users\ANYA\source\repos\Language19\Language19\obj\Debug\Language19.csproj.CoreCompileInputs.cache
+C:\Users\ANYA\source\repos\Language19\Language19\obj\Debug\Language19.exe
+C:\Users\ANYA\source\repos\Language19\Language19\obj\Debug\Language19.pdb

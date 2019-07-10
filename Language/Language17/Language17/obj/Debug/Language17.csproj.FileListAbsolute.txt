@@ -1,0 +1,7 @@
+C:\Users\ANYA\source\repos\Language17\Language17\bin\Debug\Language17.exe.config
+C:\Users\ANYA\source\repos\Language17\Language17\bin\Debug\Language17.exe
+C:\Users\ANYA\source\repos\Language17\Language17\bin\Debug\Language17.pdb
+C:\Users\ANYA\source\repos\Language17\Language17\obj\Debug\Language17.csprojAssemblyReference.cache
+C:\Users\ANYA\source\repos\Language17\Language17\obj\Debug\Language17.csproj.CoreCompileInputs.cache
+C:\Users\ANYA\source\repos\Language17\Language17\obj\Debug\Language17.exe
+C:\Users\ANYA\source\repos\Language17\Language17\obj\Debug\Language17.pdb

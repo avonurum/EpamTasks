@@ -1,0 +1,7 @@
+C:\Users\ANYA\source\repos\Language110\Language110\bin\Debug\Language110.exe.config
+C:\Users\ANYA\source\repos\Language110\Language110\bin\Debug\Language110.exe
+C:\Users\ANYA\source\repos\Language110\Language110\bin\Debug\Language110.pdb
+C:\Users\ANYA\source\repos\Language110\Language110\obj\Debug\Language110.csprojAssemblyReference.cache
+C:\Users\ANYA\source\repos\Language110\Language110\obj\Debug\Language110.csproj.CoreCompileInputs.cache
+C:\Users\ANYA\source\repos\Language110\Language110\obj\Debug\Language110.exe
+C:\Users\ANYA\source\repos\Language110\Language110\obj\Debug\Language110.pdb
