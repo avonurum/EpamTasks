@@ -14,10 +14,9 @@ namespace Oop23
         private string name;
         private string middleName;
         private DateTime dateOfBirth;
-        private int age;
 
         //решила сделать сеттер приватным, следуя логике, что человек с другой датой рождения - это уже другой человек. 
-        // про ограничения по возрасту ничего не было сказано, но я решила ввести его на всякий случай) Так как в дальнейшем нам необходимо 
+        // про ограничения по возрасту ничего не было сказано, но я решила ввести его на всякий случай) 
         public DateTime DateOfBirth
         {
             get => dateOfBirth;
@@ -25,11 +24,13 @@ namespace Oop23
             {
                 if (value.Year > (DateTime.Now.Year - edge))
                 {
-                    throw new ArgumentException("Дата рождения пользователя не может быть позже чем 10 лет назад");
+                    throw new ArgumentException($"Дата рождения пользователя не может быть позже чем {edge} лет/года назад");
                 }
                 else dateOfBirth = value;
             }
         }
+
+      //  public int Age { get => Date }
 
         public string Surname
         {

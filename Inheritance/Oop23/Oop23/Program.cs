@@ -13,7 +13,11 @@ namespace Oop23
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(DateTime.Now.Year - 8);
+            string s="g";
+            s.ToString();
+            User u = new User();
+            u.DateOfBirth = DateTime.Parse("10.01.1995"); 
+            Console.WriteLine((DateTime.Now.Year-u.DateOfBirth.Year));
             Console.ReadKey();
         }
     }
