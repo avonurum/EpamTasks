@@ -15,6 +15,14 @@ namespace Oop23
         private string middleName;
         private DateTime dateOfBirth;
 
+        public User(string surname, string name, string middleName, DateTime dateOfBirth)
+        {
+            Surname = surname;
+            Name = name;
+            MiddleName = middleName;
+            DateOfBirth = dateOfBirth;
+        }
+
         //решила сделать сеттер приватным, следуя логике, что человек с другой датой рождения - это уже другой человек. 
         // про ограничения по возрасту ничего не было сказано, но я решила ввести его на всякий случай) 
         public DateTime DateOfBirth
@@ -30,7 +38,7 @@ namespace Oop23
             }
         }
 
-      //  public int Age { get => Date }
+        public int Age { get => DateTime.Now.Year - dateOfBirth.Year; }
 
         public string Surname
         {
