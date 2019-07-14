@@ -15,12 +15,12 @@ namespace Oop23
         private string middleName;
         private DateTime dateOfBirth;
 
-        public User(string surname, string name, string middleName, DateTime dateOfBirth)
+        public User(string surname, string name, string middleName, string dateOfBirth)
         {
             Surname = surname;
             Name = name;
             MiddleName = middleName;
-            DateOfBirth = dateOfBirth;
+            DateOfBirth = DateTime.Parse(dateOfBirth);
         }
 
         //решила сделать сеттер приватным, следуя логике, что человек с другой датой рождения - это уже другой человек. 
@@ -67,7 +67,7 @@ namespace Oop23
             }
         }
 
-        private bool CheckName(string value)
+        private bool CheckName(string value)//проверка данных связанных с именем
         {
             if (String.IsNullOrWhiteSpace(value))
             {
