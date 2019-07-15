@@ -9,26 +9,23 @@ namespace Oop21
 {
     class Round
     {
-        private int x;
-        private int y;
-        private int radius;
+        private double x;
+        private double y;
+        private double radius;
 
-        public Round(int x,int y,int radius)
+        public Round(double x,double y,double radius)
         {
             X = x;
             Y = y;
             Radius = radius;
         }
 
-        public int X { get => x; set => x = value; }
-        public int Y { get => y; set => y = value; }
+        public double X { get => x; set => x = value; }
+        public double Y { get => y; set => y = value; }
 
-        public int Radius
+        public double Radius
         {
-            get
-            {
-                return radius;
-            }
+            get => radius;
             set
             {
                 if(value>0)
@@ -38,6 +35,6 @@ namespace Oop21
             }
         }
         public double Area { get => PI * radius * radius; }
-        public double Circumference { get => 2 * PI * radius; }
+        public double Circumference { get => 2 * PI * radius; } //длина окружности
     }
 }

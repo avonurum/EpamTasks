@@ -24,7 +24,7 @@ namespace Oop21
         static bool status = true;
         static void Main(string[] args)
         {
-            Round r=null;
+            Round r=new Round(0,0,10);
             while(status==true)
             {
                 Menu(ref r);
@@ -33,16 +33,10 @@ namespace Oop21
 
         static void Menu( ref Round r)
         {
-            if (r == null)
-            {
-                Console.WriteLine("Создание окужности:");
-                r=CreateRound(r);
-            }
-            else
-            {
+            
                 Console.WriteLine("Выберите: ");
-                Console.WriteLine("1.Вывести радиус \n 2.Изменить радиус \n 3.Вывести площадь \n " +
-                    "4.Вывести длину описанной окружности \n + 5.Изменить координату X \n + 6.Изменить координату Y " +
+                Console.WriteLine(" 1.Вывести радиус \n 2.Изменить радиус \n 3.Вывести площадь \n " +
+                    "4.Вывести длину описанной окружности \n 5.Изменить координату X \n 6.Изменить координату Y " +
                     "\n 7.Вывести координаты \n 8.Выход" );
                 switch(Console.ReadLine())
                 {
@@ -52,21 +46,13 @@ namespace Oop21
                     case "4": Console.WriteLine(r.Circumference); break;
                     case "5": r.X= AddValue(RoundParams.Координата_X); break;
                     case "6": r.Y = AddValue(RoundParams.Координата_Y); break;
-                    case "7": Console.WriteLine(RoundParams.Координата_X + ' ' + r.X +Environment.NewLine + RoundParams.Координата_Y + ' '+ r.Y); break;
+                    case "7": Console.WriteLine(RoundParams.Координата_X + " " + r.X +Environment.NewLine + RoundParams.Координата_Y + " "+ r.Y); break;
                     case "8": status=false; break;
                     default:Console.WriteLine("Вы ввели неверное значение");break;
                 }
-            }
         }
-        static Round CreateRound(Round round)//создание окружности
-        {
-            
-            Console.WriteLine("Введите параметры окужности");
-            round = new Round(AddValue(RoundParams.Координата_X), AddValue(RoundParams.Координата_Y), AddValue(RoundParams.Радиус));
-            return round;
 
-        }
-        static int AddValue(RoundParams r) //добавление значения
+        static double AddValue(RoundParams r) //добавление значения
         {
             Console.WriteLine(r+":");
             string value=Console.ReadLine();
