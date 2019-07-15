@@ -29,6 +29,7 @@ namespace Oop26
             }
         }
 
+
         public double Area=>Outer.Area-Inner.Area;
 
         public double SumOfLength => Outer.Length + Inner.Length;
