@@ -22,7 +22,7 @@ namespace Oop26
             set
             {
                 if (value > 0) radius = value;
-                else throw new ArgumentException("Радиус окружности не может быть меньше нуля и равняться нулю");
+                else throw new ArgumentException("Радиус круга не может быть меньше нуля и равняться нулю");
             }
         }
 

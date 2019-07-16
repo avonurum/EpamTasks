@@ -9,7 +9,7 @@ namespace Oop23
     
     class User
     {
-        private static int edge = 10;//минимальный возраст пользователя
+        private static int edge = 14;//минимальный возраст пользователя
         private string surname;
         private string name;
         private string middleName;

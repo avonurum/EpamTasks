@@ -14,9 +14,9 @@ namespace Oop21
 
     enum RoundParams
     {
-        Координата_X,
-        Координата_Y,
-        Радиус
+        Координата_X=0,
+        Координата_Y=1,
+        Радиус=2
     }
         
     class Program

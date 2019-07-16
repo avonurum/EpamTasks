@@ -14,11 +14,11 @@ namespace Oop22
     {
         enum TriangleParam
         {
-            Сторона_а,
-            Сторона_b,
-            Сторона_c,
-            Периметр,
-            Площадь
+            Сторона_а=0,
+            Сторона_b=1,
+            Сторона_c=2,
+            Периметр=3,
+            Площадь=4
         }
         static bool status=true;
         static void Main(string[] args)

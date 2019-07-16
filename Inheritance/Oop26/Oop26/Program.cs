@@ -10,10 +10,10 @@ namespace Oop26
     {
         enum RingParams
         {
-            Внешний_радиус,
-            Внутренний_радиус,
-            Площадь,
-            Сумма_длин
+            Внешний_радиус=0,
+            Внутренний_радиус=1,
+            Площадь=2,
+            Сумма_длин=3
         }
         public static bool status = true;
         static void Main(string[] args)
