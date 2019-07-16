@@ -13,12 +13,11 @@ namespace Oop27
     {
         private double innerR;
         private double outerR;
-        public Ring(string color, double x1, double y1, double x2, double y2) : base(color, x1, y1, x2, y2)
+        public Ring(double x1, double y1, double x2, double y2) : base(x1, y1, x2, y2)
         {
-            Color = color;
             Start = new Point(x1, y1);
             Finish = new Point(x2, y2);
-            InnerR = DistanceBetweenPoints;
+            InnerR = DistanceBetweenPoints();
             outerR = InnerR + InnerR * 0.3;
         }
 
@@ -30,8 +29,20 @@ namespace Oop27
         public override void Print()
         {
             Console.WriteLine($"Фигура:{this.GetType().Name}\n Внутренний радиус:{innerR}\n Внешний радиус:{outerR}\n Площадь:{Area}" +
-                $"Координаты:{{{Start.X},{Start.Y};{Finish.X},{Finish.Y}}}\n Цвет:{Color}");
+                $"Координаты:{{{Start.X},{Start.Y};{Finish.X},{Finish.Y}}}");
         }
-        public double Area => PI*(outerR*outerR-innerR*innerR);  
+        public double Area => PI*(outerR*outerR-innerR*innerR);
+        public override double DistanceBetweenPoints()
+        {
+            double value1 = Math.Sqrt((Finish.X - Start.X) * (Finish.X - Start.X) + (Finish.Y - Start.Y) * (Finish.Y - Start.Y));
+            if (value1 > 0)
+            {
+                return value1;
+            }
+            else
+            {
+                throw new ArgumentException("Радиус не может быть меньше нуля");
+            }
+        }
     }
 }
