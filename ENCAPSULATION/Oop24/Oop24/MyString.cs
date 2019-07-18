@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Oop24
 {
-    
-    //поиск символов
-    //конвертация в/из массива
     class MyString
     {
         private char[] array;
@@ -19,10 +16,10 @@ namespace Oop24
         }
         public MyString(string s)
         {
-            Array = toArray(s);
+            Array = ToArray(s);
         }
 
-        public char[] Array { get => array; private set => array = value; }//сделать проверку на null
+        public char[] Array { get => array; private set => array = value ?? throw new NullReferenceException("Передана пустая ссылка");}
 
         public int Length => array.Length;
 
@@ -40,7 +37,7 @@ namespace Oop24
             }
             return new MyString(res);
         }
-        public static char[] toArray(String str)
+        public static char[] ToArray(String str)
         {
             char[] res = new char[str.Length];
             for(int i=0;i<res.Length;i++)
@@ -48,14 +45,6 @@ namespace Oop24
                 res[i] = str[i];
             }
             return res;
-        }
-
-        public void Show()
-        {
-            foreach(char c in array)
-            {
-                Console.Write(c);
-            }
         }
         public char this[int i]//доступ к определенному символу
         {
@@ -79,7 +68,7 @@ namespace Oop24
             }
             else return false;
         }
-        public String toString()//конвертация из массива в строку
+        public override String ToString()//конвертация из массива в строку
         {
             string temp="";
             foreach(char c in array)
@@ -87,6 +76,25 @@ namespace Oop24
                 temp += c;
             }
             return temp;
+        }
+        public bool Contains(char c)//поиск элемента
+        {
+            foreach (char ch in array)
+            {
+                if (ch == c)
+                    return true;
+            }
+            return false;
+        }
+        public MyString Replace(char c,char c2)//замена элемента
+        {
+            char[] res = new char[Length];
+            for(int i=0;i<array.Length;i++)
+            {
+                if (array[i]==c)res[i] = c2;
+                else res[i] = array[i];
+            }
+            return new MyString(res);
         }
 
 
