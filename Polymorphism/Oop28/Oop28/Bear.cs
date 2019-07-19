@@ -8,18 +8,21 @@ namespace Oop28
 {
     class Bear : Monster
     {
-        public Bear(int x, int y, char sign) : base(x, y, sign)
+        private char sign = 'B';
+        public Bear(int x, int y) : base(x, y)
         {
+            Sign = 'B';
         }
 
-        public override bool CheckPosotion(int x, int y)
+        public override bool CheckPosition(int x, int y)
         {
             throw new NotImplementedException();
         }
 
         public override void HitPlayer(Player p)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Лапой по лицу");
+            p.Lives = p.Lives - 2;
         }
 
         public override void Move(string direction)

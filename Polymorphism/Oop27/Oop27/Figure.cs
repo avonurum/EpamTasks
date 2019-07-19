@@ -20,6 +20,6 @@ namespace Oop27
         protected Point Start { get => start; set => start = value; }
         protected Point Finish { get => finish; set => finish = value; }
         abstract public void Print(); //демонстрация фигуры
-        public abstract double DistanceBetweenPoints();//подсчет растояния между наальной и конечной точкой;
+        public abstract double DistanceBetweenPoints();//подсчет растояния между наxальной и конечной точкой;
     }
 }

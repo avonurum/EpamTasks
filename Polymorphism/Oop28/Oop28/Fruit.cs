@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Oop28
 {
-    class Fruit:Entity
+    abstract class Fruit : Entity
     {
+        public Fruit(int x, int y) : base(x, y)
+        {
+        }
+        abstract public void GiveSmthGood(Player y);
     }
 }

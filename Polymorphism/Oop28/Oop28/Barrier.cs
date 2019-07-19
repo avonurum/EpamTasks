@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Oop28
 {
-    class Barrier : Entity
+   abstract class Barrier : Entity  //барьеры, ни монстр, ни персонаж не могут наступать на клетку такого типа
     {
         public Barrier(int x, int y) : base(x, y)
         {

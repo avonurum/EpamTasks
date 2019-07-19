@@ -48,6 +48,7 @@
     <Compile Include="Bear.cs" />
     <Compile Include="Cherry.cs" />
     <Compile Include="Entity.cs" />
+    <Compile Include="Field.cs" />
     <Compile Include="Fruit.cs" />
     <Compile Include="IMovable.cs" />
     <Compile Include="Monster.cs" />

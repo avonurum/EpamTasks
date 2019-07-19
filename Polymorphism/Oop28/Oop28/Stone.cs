@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Oop28
 {
-    class Stone:Barrier
+    class Stone : Barrier
     {
+
+        public Stone(int x, int y) : base(x, y)
+        {
+
+        }
     }
 }

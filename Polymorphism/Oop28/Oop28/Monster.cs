@@ -8,8 +8,9 @@ namespace Oop28
 {
    abstract class Monster:Entity,IMovable
     {
-        protected Monster(int x, int y, char sign) : base(x, y, sign)
+        protected Monster(int x, int y) : base(x, y)
         {
+
         }
 
         public abstract bool CheckPosition(int x, int y);

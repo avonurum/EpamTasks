@@ -10,6 +10,12 @@ namespace Oop28
     {
         static void Main(string[] args)
         {
+            Player player = new Player(0, 0, 'P');
+        }
+        static void Play(Player p)
+        {
+           if( p.Status==false ) return;
+            
         }
     }
 }

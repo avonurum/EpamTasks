@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Oop28
 {
-    class Tree:Barrier
+    class Tree : Barrier
     {
+        private char sign = 'T';
+        public Tree(int x, int y) : base(x, y){} 
     }
 }

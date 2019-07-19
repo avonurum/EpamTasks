@@ -12,7 +12,7 @@ namespace Oop28
         private int y;
         private char sign;
 
-        protected Entity(int x, int y,char sign)
+        protected Entity(int x, int y)
         {
             X = x;
             Y = y;
@@ -20,5 +20,6 @@ namespace Oop28
 
         public int X { get => x; set => x = value; }
         public int Y { get => y; set => y = value; }
+        public char Sign { get => sign;protected set => sign = value; }
     }
 }
