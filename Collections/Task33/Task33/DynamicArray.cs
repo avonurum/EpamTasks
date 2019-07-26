@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace Task33
 
-/*
- * 
- * Insert
- * 
- * 
- * */
+
 {
     class DynamicArray<T> : IEnumerable<T>
     {
@@ -125,9 +120,9 @@ namespace Task33
             }
         }
 
-        public int Capacity { get => capacity; set => capacity = value; }
-        public T[] Array { get => array; set => array = value; }
-        public int Length { get => length; set => length = value; }
+        public int Capacity { get => capacity;private set => capacity = value; }
+        public T[] Array { get => array; private set => array = value; }
+        public int Length { get => length; private set => length = value; }
 
 
         IEnumerator IEnumerable.GetEnumerator()
