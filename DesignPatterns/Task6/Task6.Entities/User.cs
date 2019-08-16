@@ -4,12 +4,14 @@ namespace Task6.Entities
 {
     public class User
     {
+        private Guid id;
         private string name;
         private DateTime dateOfBirth;
         private int age;
         private const int minAge = 7;
         public User(string name, DateTime dateOfBirth)
         {
+            Id = new Guid();
             Name = name;
             DateOfBirth = dateOfBirth;
             Age = DateTime.Now.Year - dateOfBirth.Year;
@@ -31,8 +33,6 @@ namespace Task6.Entities
             }
             }
         public int Age { get; private set; }
-
-
-
+        public Guid Id { get; private set; }
     }
 }

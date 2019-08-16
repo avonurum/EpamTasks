@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Task6.PL
 {
@@ -11,6 +12,8 @@ namespace Task6.PL
         static void Main(string[] args)
         {
             Menu();
+            XmlDocument dc = new XmlDocument();
+            dc.Load("dcllsjc");
         }
 
         static void Menu()
