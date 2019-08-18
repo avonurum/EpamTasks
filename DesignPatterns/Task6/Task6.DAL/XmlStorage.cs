@@ -1,55 +1,123 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Schema;
+using Task6.Entities;
 
 namespace Task6.DAL
 {
-    public class XmlStorage
+    public class XmlStorage:IStorable
     {
-        private XmlDocument doc= new XmlDocument();
+        private XmlDocument doc;
+        private List<string> tags = new List<string> { "USER", "ID", "NAME", "DATEOFBIRTH", "AGE" };
+        private const string pathForStorage = @"D:\Program\repos\Task6\XMLFile1.xml"; 
+
+        public XmlDocument Doc { get => doc; private set => doc = value; }
+
+        public static string PathForStorage => pathForStorage;
 
         public XmlStorage()
         {
-            doc.Load("Department.xml");
-        }
-
-        public void AddUser()
-        {
-          
-
-        }
-        public void DeleteUser()
-        {
-            
-            XmlElement Root = doc.DocumentElement;
-            int size = Root.ChildNodes.Count;
-            bool check = true;
-            int num;
-            while (check)
+            ValidatingXML.Valid();
+            doc = new XmlDocument();
+            try
             {
-                Console.WriteLine("Write down an id of user to delete him:");
-
-                try
-                {
-                    num = int.Parse(Console.ReadLine()) - 1;
-                    if (num < size && num >= 0) ;
-                    {
-                        Root.RemoveChild(Root.ChildNodes[num]);
-                        check = false;
-                    }
-                }
-                catch
-                {
-                    Console.WriteLine("Value is wrong.Please, try again");
-                }
-
+                doc.Load(PathForStorage);
             }
-            doc.Save("Department.xml");
+            catch(Exception)
+            {
+                Console.WriteLine("File was not downloaded");
+            }
 
+        }
+
+        public void AddUser(User user)
+        {
+            XmlElement Root = Doc.DocumentElement;
+            XmlElement userElem = Doc.CreateElement(tags[0]);
+
+
+            XmlElement userId = Doc.CreateElement(tags[1]);
+            XmlElement userName = Doc.CreateElement(tags[2]);
+            XmlElement userDateOfBirth = Doc.CreateElement(tags[3]);
+            XmlElement userAge = Doc.CreateElement(tags[4]);
+            XmlText usId = Doc.CreateTextNode(user.Id.ToString());
+            XmlText usName = Doc.CreateTextNode(user.Name);
+            XmlText usDateOfBirth = Doc.CreateTextNode(user.DateOfBirth.ToString());
+            XmlText usAge = Doc.CreateTextNode(user.Age.ToString());
+
+            userId.AppendChild(usId);
+            userName.AppendChild(usName);
+            userDateOfBirth.AppendChild(usDateOfBirth);
+            userAge.AppendChild(usAge);
+            userElem.AppendChild(userId);
+            userElem.AppendChild(userName);
+            userElem.AppendChild(userDateOfBirth);
+            userElem.AppendChild(userAge);
+            Root.AppendChild(userElem);
+
+            Doc.Save(PathForStorage);
+
+
+        }
+        public bool DeleteUser(uint userIndex)
+        {
+
+            XmlElement Root = Doc.DocumentElement;
+            int size = Root.ChildNodes.Count;
+            try
+            {
+                if (userIndex - 1 < size && userIndex - 1 >= 0)
+                {
+                    Root.RemoveChild(Root.ChildNodes[(int)userIndex-1]);
+                }
+                Doc.Save(PathForStorage);
+                return true;
+            }
+            catch
+            {
+                Console.WriteLine("Value is wrong.");
+                return false;
+            }
         }
         public void ShowUsers()
         {
+            int num = 1;
+            foreach (XmlElement user in Doc.GetElementsByTagName(tags[0]))
+            {
+                Console.WriteLine(num + ".");
+                
+                for (int i = 0; i < user.ChildNodes.Count; i++)
+                {
+                    Console.WriteLine(user.ChildNodes[i].InnerText);
+                }
+                num++;
+                Console.WriteLine();
+            }
+        }
+    }
 
+    class ValidatingXML
+    {
+        public static void Valid()
+        {
+            XmlReaderSettings settings = new XmlReaderSettings();
+            settings.DtdProcessing = DtdProcessing.Parse;
+            settings.ValidationType = ValidationType.DTD;
+            settings.ValidationEventHandler += new ValidationEventHandler(HandleEvent);
+            XmlReader reader = XmlReader.Create(XmlStorage.PathForStorage, settings);
+            while (reader.Read()) ;
+            reader.Close();
 
+        }
+
+        public static void HandleEvent(object sender, ValidationEventArgs e)
+        {
+            Console.WriteLine("Error : {0}", e.Message);
         }
     }
 }
+
