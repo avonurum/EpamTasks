@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Award.cs" />
+    <Compile Include="AwardHolder.cs" />
     <Compile Include="IStorable.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

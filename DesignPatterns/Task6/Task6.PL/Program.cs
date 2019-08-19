@@ -24,10 +24,11 @@ namespace Task6.PL
             Console.WriteLine("1. Create user\n" +
                 "2. Delete user\n" +
                 "3. Show users\n" +
-                "4. Exit");
+                "4. Add Award\n" +
+                "5. Exit");
             if (uint.TryParse(Console.ReadLine(), out uint secectedOption)
                 && secectedOption > 0
-                && secectedOption < 4)
+                && secectedOption < 5)
             {
                 switch (secectedOption)
                 {
@@ -46,6 +47,11 @@ namespace Task6.PL
                         Menu();
                         break;
                     case 4:
+                        if (AddAwardToUserByNumber()) Console.WriteLine("Award was added");
+                        else Console.WriteLine("Award was not added");
+                        Menu();
+                        break;
+                    case 5:
                         return;
                 }
             }
@@ -75,13 +81,31 @@ namespace Task6.PL
         }
         static bool DeleteUserByNumber()
         {
-            Console.WriteLine("Write down inder number of user to delete him");
+            Console.WriteLine("Write down index number of user to delete him");
             uint selectedChoise = 0;
             if (uint.TryParse(Console.ReadLine(), out uint result))
             {
                 selectedChoise = result;
             }
             return userManager.DeleteUser(result);
+        }
+
+        static bool AddAwardToUserByNumber()
+        {
+            
+            string tempName = Console.ReadLine();
+            Console.WriteLine("Write down index number of user to add him the award");
+            uint selectedChoise = 0;
+            if (uint.TryParse(Console.ReadLine(), out uint result))
+            {
+                selectedChoise = result;
+            }
+            return userManager.AddAwardToUserByNumber(result, CreateAward());
+        }
+        static Award CreateAward()
+        {
+            Console.WriteLine("Title:");
+            return new Award(Console.ReadLine());
         }
         static void ShowUsers()
         {

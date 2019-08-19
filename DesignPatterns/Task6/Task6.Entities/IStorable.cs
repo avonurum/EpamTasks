@@ -11,5 +11,6 @@ namespace Task6.Entities
         void AddUser(User user);
         bool DeleteUser(uint userIndex);
         void ShowUsers();
+        bool AddAwardToUserByNumber(uint userIndex, Award award);
     }
 }

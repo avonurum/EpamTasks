@@ -21,10 +21,6 @@ namespace Task6.BLL
             {
                 data = new XmlStorage();
             }
-            else if (i == 1)
-            {
-                data = new MemoryStorage();
-            }
             else throw new ArgumentException("File contains wrong data");
         }
 
@@ -41,6 +37,14 @@ namespace Task6.BLL
         public void ShowUsers()
         {
             data.ShowUsers();
+        }
+
+       public bool AddAwardToUserByNumber(uint userIndex, Award award)
+        {
+            if (!AwardHolder.CheckKey(award))
+                return(data.AddAwardToUserByNumber(userIndex, award));
+            else return false;     
+                
         }
     }
 }
