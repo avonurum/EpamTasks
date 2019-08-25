@@ -1,0 +1,23 @@
+.headline
+{
+    background-color: #008b66;
+    color: white;
+    margin:10px;
+    width: 400px;
+    font-size: 23px;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content
+{
+    background-color: #dfe6e1;
+    width: 370px;
+    border:1px solid white;
+    border-right:none;
+    position: relative;
+    padding: 10px;
+    overflow: auto;
+    left: 39px;
+    bottom: 17px;
+}
