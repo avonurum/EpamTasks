@@ -1,0 +1,111 @@
+
+body *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#mainUL
+{
+    position: relative;
+    margin: 20px;
+    list-style-type: none;
+}
+.menu
+{
+    float: left;
+    width: 80px;
+}
+.menu ul
+{
+    display: none;
+    list-style-type: none;
+    border: 1px solid #A4A4A4;
+    position: absolute;
+    box-shadow: 0 0 8px -1px #A4A4A4; 
+    background-color: #fff;
+    width: 120px;
+    border-radius: 0px 5px 5px 5px;
+}
+
+.menu:hover ul
+{
+    position:absolute;
+    display: block;
+    z-index: -1;
+}
+
+.menu li
+{
+    width: 120px;
+}
+.menu:hover .editingLink
+{
+    text-decoration: none;
+    color: #000;
+    border-right: 1px solid #A4A4A4;
+    border-left: 1px solid #A4A4A4;
+    border-top: 1px solid #A4A4A4;
+    border-radius: 6px 6px 0 0;
+    padding: 5px 5px 2px 5px;
+    background-color: #fff;
+    box-shadow: 1px -1px 2px -1px #A4A4A4, -1px -1px 2px -1px #A4A4A4;    
+}
+.editingLink
+{   color: #37ABFF;
+    padding: 6px;
+}
+.menu ul li a {
+    text-decoration: none;
+    padding: 0 20px 0 5px;
+    color: #37ABFF;
+}
+.menu ul li a:hover {
+    color: #fff;
+    background-color: #37ABFF;
+    display: block;
+    width: 98%;
+}
+
+/*
+#FileOptions,#EditingOptions
+{
+   display: none;
+   padding-left: 0;
+   margin: 0;
+   display: none;
+	border: 1px solid #A4A4A4;
+	position: absolute;
+	z-index: -1;
+	box-shadow: 0 0 8px -1px #A4A4A4; 
+	background-color: #fff;
+    width: 120px;
+}
+#File,#Editing
+{
+    float: left;
+	list-style-type: none;
+    width: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#File:hover #FileOptions,#Editing:hover>#EditingOptions:hover
+{
+    display: block;
+    padding-left: 0;
+    border-radius: 5px;
+}
+#File:hover>li
+{
+    z-index: 1;
+    text-decoration: none;
+			color: #000;
+			border-right: 1px solid #A4A4A4;
+			border-left: 1px solid #A4A4A4;
+            border-top: 1px solid #A4A4A4;
+            padding: 5px;
+			border-radius: 6px 6px 0 0;
+			background-color: #fff;
+			box-shadow: 1px -1px 2px -1px #A4A4A4, -1px 0 2px -1px #A4A4A4;
+}*/

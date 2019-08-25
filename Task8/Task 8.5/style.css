@@ -1,0 +1,45 @@
+body
+{
+    background-color: #4e6379;
+}
+.colomn
+{
+    float: left;
+    padding:0 30px;
+    text-align: center;
+    margin-top:20px;
+    border-left: 1px solid #d9d9d9;
+}
+.colomn:first-child 
+{ 
+    border: none;
+}
+.hosting
+{
+    background-color: white;
+    border-radius: 5px;
+    width: 704px;
+    height: 200px;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.4);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+i
+{
+    color:#60605e;
+}
+button
+{
+    border: none;
+    border-radius: 3px;
+    background-color: #f56332;
+    color: white;
+    margin-top: 10px;
+    padding: 5px;
+}
+h3
+{
+    color: #f56332;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
