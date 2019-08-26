@@ -1,0 +1,46 @@
+* 
+{
+    box-sizing: border-box;
+}
+.main 
+{
+    width: 500px;
+    font-size: 0;
+    text-align: center;
+}
+.main span 
+{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 35px;
+    background: linear-gradient(0deg, #dddddd, #bab9b9 50%, #dddddd);
+}
+.main span:hover 
+{
+    background: linear-gradient(0deg, #aee188, #69c724 50%, #aee188);  
+    color:white;
+}
+.main span::before,.main span::after 
+{
+    content: '';
+    position: absolute;
+    border-width: 18px 6px;
+    border-style: solid;
+    border-right: none;  
+}
+.main span::before {
+    left: 0;   
+    border-color: transparent;
+    border-left-color: white;  
+}
+.main span::after {
+    right: 0;
+    border-color: white;
+    border-left-color: transparent;
+}
+.main span:first-child::before,.main span:last-child::after {
+    display: none;
+}
