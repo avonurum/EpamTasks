@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="">
+		<label>Введите строку</label>
+		<input type="text" id="inputString">
+		<input type="submit" id="submit">
+		<br>
+		<label>Результат:</label> <span id="output">dgsdgdcgsd</span>
+
+	</form>
+	<script type="text/javascript">
+		var string;
+		var result;
+		var separators = [ " ","\t","?", "!", ":", ";", ",", "."];
+		document.getElementById("submit").onclick = startReducing;
+	
+		function reduceLetters(sentence)
+		{
+			var letters = {};
+			var words = sentence.split(' ');
+			for(i=0;i<words.length;i++)
+			{
+				var word = words[i].split('');
+				for(j=0;j<word.length;j++)
+				{
+					if(!letters[word[j]] && separators.indexOf(word[i])==-1 && -1!=word.indexOf(word[j].toLowerCase(),j+1))
+					{
+						letters[word[j]]=1;
+					}
+				}
+			}
+			return sentence.split('').filter(function(item){ return !letters[item];}).join('');
+		}
+		
+	function startReducing()
+	{
+		console.log("Работаит");
+		if(document.getElementById("inputString").value!=null)
+		document.getElementById("output").value = reduceLetters(document.getElementById("inputString").value);
+	}
+		
+
+	</script>
+</body>
+</html>
